@@ -1,0 +1,381 @@
+
+
+
+
+
+* , 
+*::after ,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#header{
+    width: 100%;
+    float:left;
+    /* background-color:gold; */
+    overflow: hidden;
+
+}
+.logo{
+    float: left;
+    position: relative;
+    width: 300px;
+    height: 100px;
+    left: 150px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    /* background-color:green; */
+}
+#checkbox{
+  position: absolute;
+   top: 25px;
+   right: 230px;
+   width: 50px;
+   height: 50px;
+   z-index: 6;
+   display: none;
+}
+label{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 25px;
+    right: 230px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 17;
+    /* background-color:gray; */
+}
+#checkbox:checked ~ #nav{
+    top: 0;
+    left: 0;
+}
+ .line{
+     width: 100%;
+     height: 4px;
+     background-color:#6CA9D0;
+     position: absolute;
+     transition: 700ms;
+ }
+ .line-1{
+     top: 8px;
+ }
+ .line-2{
+    top: 23px;
+}
+ .line-3{
+    top: 40px;
+}
+#checkbox:checked ~ .lbl .line-1{
+    top: 23px;
+    transform: rotate(405deg);
+}
+#checkbox:checked ~ .lbl .line-2{
+
+     transform: scale(0);
+
+}
+#checkbox:checked ~ .lbl .line-3{
+    top: 23px;
+    transform: rotate(-405deg);
+
+}
+ #nav{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.445);
+    top: -100%;
+    left: 0;
+    z-index: 16;
+    transition: 1s;
+  
+}
+#nav ul{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+
+}
+#nav ul li{
+    list-style: none;
+}
+#nav ul li a{
+   text-decoration: none;
+   color:#333;
+   font-size: 45px;
+   font-weight:bold;
+   display: block;
+   font-family: 'Fuggles', cursive;
+    padding: 10px 25px;
+   
+}
+#header  .tweeter{
+    width:62px;
+    height:62px;
+    background: url("img/sprite.png") no-repeat -576px 0;
+    float: right;
+    margin-right:100px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#header  .doblle{
+    width:62px;
+    height:62px;
+    background: url("img/sprite.png") no-repeat -512px 0;
+    float: right;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#header  .tweeter:hover{
+    background-position:-576px -128px ;
+}
+#header  .doblle:hover{
+    background-position:-512px -128px ;
+}
+#main-1{
+    width: 100%;
+    height: 100vh;
+    background: url("img/sketch1a.jpg") no-repeat center center;
+    background-size: contain;
+    background-attachment: fixed;
+    position: relative;
+}
+.zebra{
+    width: 100%;
+    height: 20vh;
+    background-color: #6CA9D0;
+    position:absolute;
+    bottom:0;
+    transform: skewY(5deg);
+    transform-origin: left;
+}
+.zebra > i{
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    /* transform: translate(-50% ,0); */
+    font-size: 40px;
+    color:gray;
+    animation:chevron 1.5s linear infinite forwards ;
+}
+@keyframes chevron{
+    33%{
+        /* transform-origin: top left; */
+         bottom: 10px;
+    }
+    66%{ 
+        /* left: 0; */
+      bottom:5px;
+       transform: scale(1);
+       color:gray;
+    }
+    100%{
+        bottom:-20px;
+        color: rgba(128, 128, 128, 0);
+        transform: scale(0);
+    }
+}
+
+.pop{
+    width: 100%;
+    height: 100vh;
+    background-color: #6CA9D0;
+    position: absolute;
+   
+    /* transform: skewY(2deg); */
+  
+}
+#finalpc{
+    width: 100%;
+    height: 100vh;
+    background:url("img/sketch1b.jpg") no-repeat center center;
+    background-size: contain;
+    background-attachment: fixed;
+    position: relative;
+
+}
+#main-2{
+    width: 100%;
+    height: 100vh;
+    background: url("img/sketch2a.jpg") no-repeat center center;
+    background-size: contain;
+    background-attachment: fixed;
+    position: relative;
+}
+.zebra-2{
+    width: 100%;
+    height: 20vh;
+    background-color:white;
+    position:absolute;
+    bottom:100%;
+    transform: skewY(-5deg);
+    transform-origin: right top;
+}
+
+.zebra-2 > i{
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    /* transform: translate(-50% ,0); */
+    font-size: 40px;
+    color:gray;
+    animation:chevron 1.5s linear infinite forwards ;
+}
+@keyframes chevron{
+    33%{
+        /* transform-origin: top left; */
+         bottom: 10px;
+    }
+    66%{ 
+        /* left: 0; */
+      bottom:5px;
+       transform: scale(1);
+       color:gray;
+    }
+    100%{
+        bottom:-20px;
+        color: rgba(128, 128, 128, 0);
+        transform: scale(0);
+    }
+}
+.pop-2{
+    width: 100%;
+    height: 100vh;
+    background-color: #DD71AF;
+    position: absolute;
+   
+    /* transform: skewY(2deg); */
+  
+}
+#finalbook{
+    width: 100%;
+    height: 100vh;
+    background:url("img/sketch2b.jpg") no-repeat center center;
+    background-size: contain;
+    background-attachment: fixed;
+    position: relative;
+
+}
+.zebra-3{
+    width: 100%;
+    height: 20vh;
+    background-color:#DD71AF;
+    position:absolute;
+    bottom:100%;
+    transform: skewY(5deg);
+    transform-origin: left top;
+}
+.zebra-3 > i{
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    /* transform: translate(-50% ,0); */
+    font-size: 40px;
+    color:gray;
+    animation:chevron 1.5s linear infinite forwards ;
+}
+@keyframes chevron{
+    33%{
+        /* transform-origin: top left; */
+         bottom: 10px;
+    }
+    66%{ 
+        /* left: 0; */
+      bottom:5px;
+       transform: scale(1);
+       color:gray;
+    }
+    100%{
+        bottom:-20px;
+        color: rgba(128, 128, 128, 0);
+        transform: scale(0);
+    }
+}
+
+#main-3{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+ 
+}
+#main-3::after{
+    content: "";
+    display: table;
+    clear:both;
+}
+.zebra-4{
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+    position:relative;
+    top:0;
+    transform: skewY(-5deg);
+    transform-origin: left;
+    margin-bottom: 50px;
+}
+.zebra-4 > i{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    /* transform: translate(-50% ,0); */
+    font-size: 40px;
+    color:gray;
+    animation:chevron 1.5s linear infinite forwards ;
+}
+@keyframes chevron{
+    33%{
+        /* transform-origin: top left; */
+        transform: scale(1);
+         top: 10px;
+    }
+    66%{ 
+        /* left: 0; */
+      top:20px;
+       transform: scale(0.5);
+       color:gray;
+    }
+    100%{
+        top:30px;
+        color: rgba(128, 128, 128, 0);
+        transform: scale(0);
+    }
+}
+
+#main-3 .pi {
+    font-size: 50px;
+    font-family: 'Fuggles', cursive; 
+    margin-bottom: 80px;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+#main-3 .wrapper-1{
+    width: 50%;
+    height:150px;
+    float: left;
+    font-size: 20px;
+ 
+
+}
+.wrapper-1 > p{
+    padding: 0 30px;
+
+}
+.image-box{
+    width: 100%;
+   
+}
+.image-box > .image{
+    width: 16.6667%;
+    height: 150px;
+    float: left;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
